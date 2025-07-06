@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'booktracker/style.css' %}">
+        <title>
+            {% block title %}
+            {% endblock title %}
+        </title>
+    </head>
+    <body>
+        <nav>
+            <div class="nav-title">BookTracker</div>
+            <div class="nav-center">
+                <ul>
+                    <li>Dashboard</li>
+                    <li>My Books</li>
+                    <li>Reading List</li>
+                    <li>Statistics</li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <button>Add Book</button>
+            </div>
+        </nav>
+        <main>
+            {% block main %}
+            {% endblock main %}
+        </main>
+    </body>
+</html>

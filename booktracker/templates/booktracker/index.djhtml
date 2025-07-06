@@ -1,0 +1,16 @@
+{% extends "booktracker/template.djhtml" %}
+{% block title %}
+  Index
+{% endblock title %}
+{% block main %}
+  <div class="books-container">
+    {% for book in books %}
+      <div class="book-container">
+        <h3 class="book-title">{{ book.name }}</h3>
+        <div class="book-pages">Page{{ book.pages|pluralize }} :{{ book.pages }}</div>
+        <div class="book-status">{{ book.status }}</div>
+        {% if book.status == True %}<div class="book-appreciation">{{ book.mark }}</div>{% endif %}
+      </div>
+    {% endfor %}
+    <div
+    {% endblock main %}
